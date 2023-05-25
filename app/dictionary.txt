@@ -1,0 +1,9 @@
+weather
+temperature
+humidity
+pressure
+forecast
+sunshine
+precipitation
+wind
+visibility

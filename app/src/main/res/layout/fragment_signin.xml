@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.secureprogramming.feature.authentication.ui.signin.SignInFragment">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.example.secureprogramming.feature.authentication.presentation.SignInViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+     >
+
+        <LinearLayout
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:background="@drawable/bg_arc"
+            android:paddingHorizontal="24dp"
+            android:gravity="center|start"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+            <TextView
+                android:id="@+id/loginTextView"
+                style="@style/SemiboldTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LOGIN NOW"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                />
+
+
+            <TextView
+                android:id="@+id/messageTextView"
+                style="@style/RegularTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="13sp"
+                android:text="Welcome back! Our password manager app uses industry-standard encryption to protect your sensitive information. Log in to access your vault"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/colorBackground"
+            android:paddingHorizontal="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topLayout">
+
+            <TextView
+                android:id="@+id/loginMessageTextView"
+                style="@style/RegularTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24sp"
+                android:text="Please enter the details below to continue."
+                android:textColor="@color/colorText2"
+                android:textSize="14sp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+
+            <EditText
+                android:id="@+id/emailEditText"
+                style="@style/EditTextStyle"
+                android:layout_width="0dp"
+                android:layout_marginTop="12sp"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="16dp"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:text="@={viewmodel.email}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/loginMessageTextView" />
+
+
+
+            <TextView
+                android:id="@+id/emailErrorTextView"
+                style="@style/RegularTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@{viewmodel.emailError}"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/emailEditText" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password_layout"
+                style="@style/EditTextStyle"
+                android:layout_width="0dp"
+                android:layout_marginTop="10dp"
+                app:endIconMode="password_toggle"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/emailErrorTextView"
+                app:startIconDrawable="@drawable/ic_key">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/passwordTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorText1"
+                    android:textColorHint="@color/colorText3"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:text="@={viewmodel.password}" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/passwordErrorTextView"
+                style="@style/RegularTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@{viewmodel.passwordError}"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/password_layout" />
+
+            <Button
+                android:id="@+id/loginButton"
+                style="@style/ButtonStyle"
+                android:layout_width="0dp"
+                android:layout_marginTop="28dp"
+                android:enabled="false"
+                android:text="Login"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/passwordErrorTextView" />
+
+
+            <TextView
+                android:id="@+id/waitTimeTextView"
+                style="@style/RegularTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="@{viewmodel.waitTime}"
+                android:textColor="@color/colorAccent"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/loginButton" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    style="@style/RegularTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Don't have an account yet? "
+                    android:textColor="@color/colorText3"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/signUpTextView"
+                    style="@style/SemiboldTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Join us now"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

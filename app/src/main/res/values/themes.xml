@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.SecureProgramming" parent="Theme.AppCompat.Light.NoActionBar" >
+        <item name="android:fontFamily">@font/font_family</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+
+    </style>
+
+    <!-- Text style for regular font -->
+    <style name="RegularTextStyle">
+        <item name="android:fontFamily">@font/lato_regular</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorText2</item>
+    </style>
+
+    <!-- Text style for bold font -->
+    <style name="BoldTextStyle">
+        <item name="android:fontFamily">@font/lato_black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorText1</item>
+    </style>
+
+    <!-- Text style for thin font -->
+    <style name="ThinTextStyle">
+        <item name="android:fontFamily">@font/lato_thin</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorText1</item>
+    </style>
+
+    <!-- Text style for semibold font -->
+    <style name="SemiboldTextStyle">
+        <item name="android:fontFamily">@font/lato_bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorText1</item>
+    </style>
+
+
+    <style name="EditTextStyle">
+        <item name="android:fontFamily">@font/lato_regular</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/colorText1</item>
+        <item name="android:textColorHint">@color/colorText3</item>
+        <item name="android:background">@drawable/rounded_bg</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:elevation">1dp</item>
+        <item name="maxLines">1</item>
+    </style>
+
+
+    <style name="ButtonStyle">
+        <item name="android:layout_height">50dp</item>
+        <item name="android:fontFamily">@font/lato_regular</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/rounded_bg_blue</item>
+        <item name="android:elevation">1dp</item>
+    </style>
+
+</resources>

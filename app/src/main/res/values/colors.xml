@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <!-- Primary brand color -->
+        <color name="colorPrimary">#4682bc</color>
+        <color name="colorPrimaryDark">#2868a0</color>
+        <color name="colorAccent">#dc254b</color>
+
+        <!-- Text color -->
+         <color name="colorText1">#1f1a19</color>
+         <color name="colorText2">#272120</color>
+         <color name="colorText3">#838383</color>
+         <color name="colorText4">#E3E3E3</color>
+
+        <!-- Hint color -->
+        <color name="colorHint">#757575</color>
+
+        <!-- Background colors -->
+        <color name="colorBackground">#F5F5F5</color>
+        <color name="colorBackgroundDark">#F0F0F0</color>
+        <color name="colorBackgroundLight">#eeeeee</color>
+
+        <!-- Separator color -->
+        <color name="colorSeparator">#BDBDBD</color>
+
+        <!-- Button colors -->
+        <color name="colorButtonNormal">#283593</color>
+        <color name="colorButtonPressed">#1A237E</color>
+        <color name="colorButtonDisabled">#BDBDBD</color>
+
+        <!-- Status bar color -->
+        <color name="colorStatusBar">#1A237E</color>
+
+        <!-- Navigation bar color -->
+        <color name="colorNavigationBar">#ffffff</color>
+
+        <color name="colorEditTextBg">#FFFFFF</color>
+
+        <color name="disabledButtonColor">#BDBDBD</color>
+
+        <color name="white">#FFFFFF</color>
+
+</resources>
